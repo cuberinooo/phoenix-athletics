@@ -16,7 +16,7 @@ export const coachesData = [
     certifications: [
       'CrossFit Level 1',
       'CrossFit Level 2',
-      'Fitness B Lizenz',
+      'Fitness B License',
       'Athletiktrainerin',
       'Personal Trainerin',
       'Ernährungsberaterin'
@@ -59,10 +59,16 @@ export const coachesData = [
     },
     image: '/assets/vio.jpg',
     description: {
-      de: 'N/A',
-      en: 'N/A'
+      de: 'Functional Fitness ist meine Leidenschaft. ' +
+          'Ich coache mit viel Herz, einem Blick fürs Detail und einer kräftigen Portion Humor – denn gutes Training funktioniert am besten, wenn man Spaß daran hat.',
+      en: 'Functional fitness is my passion. ' +
+          'I coach with a lot of heart, a keen eye for detail, and a healthy dose of humor — because the best training works when you actually enjoy it.'
     },
-    certifications: []
+    certifications: [
+        'Functional Fitness Trainer',
+        'Fitness B License',
+        'Ernährungsberaterin'
+    ]
   }
 ];
 

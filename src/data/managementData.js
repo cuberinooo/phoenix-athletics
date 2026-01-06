@@ -29,30 +29,19 @@ export const managementData = [
   },
   {
     id: 3,
-    name: 'Lisa',
+    name: 'David',
     title: {
-      de: 'Schatzmeisterin',
+      de: 'Schatzmeister',
       en: 'Treasurer'
     },
-    image: '/assets/lisa.jpg',
+    image: '/assets/david.jpg',
     description: {
-      de: 'Sie engagiert sich im Vorstand, weil ihr der Verein und seine Werte sehr am Herzen liegen. Als gelernte Augenoptikerin und Mutter einer kleinen Tochter ist es ihr wichtig, Verantwortung zu übernehmen und sich für eine starke Gemeinschaft einzusetzen. Dabei motiviert sie besonders der Wunsch, ein positives Umfeld für alle Mitglieder – insbesondere auch für Familien – zu fördern. Zudem macht sie selbst liebend gerne Sport und hat bei Phoenix Athletics e.V. einen ganz besonderen Ort zum Wohlfühlen und Glücklich sein gefunden.',
-      en: 'She is committed to the board because the club and its values are very close to her heart. As a trained optician and mother of a young daughter, it is important to her to take responsibility and work for a strong community. She is particularly motivated by the desire to promote a positive environment for all members - especially for families. She also loves doing sports herself and has found a very special place at Phoenix Athletics e.V. where she feels comfortable and happy.'
+      de: 'David hat Bock auf Sport – am liebsten mit netten Leuten zusammen. Und das gibt es bei Phoenix Athletics. ' +
+          'Ihm gefällt sehr, was die Gründer*innen des Vereins auf die Beine gestellt haben. Deshalb will er nicht nur an den Trainings teilnehmen, sondern aktiv helfen, den Verein weiterzuentwickeln. Daher engagiert sich David als Kassenwart.',
+      en: 'David enjoys being active – preferably together with nice people. And that’s exactly what Phoenix Athletics offers. ' +
+          'He really likes what the founders of the club have built. That’s why he doesn’t just want to take part in the training sessions, but also actively help develop the club further. For this reason, David is involved as the club’s treasurer.'
     }
   },
-  {
-    id: 4,
-    name: 'Vero',
-    title: {
-      de: 'Schatzmeisterin',
-      en: 'Treasurer'
-    },
-    image: '/assets/vero.jpg',
-    description: {
-      de: 'Als sie mit Crossfit angefangen hat, hat Vero schnell gelernt, wie toll es sich anfühlen kann, über seine Grenzen zu gehen, seinen eigenen Schweinehund zu überwinden und dabei von den liebsten Menschen unterstützt zu werden. Sie engagiert sich im Vorstand, weil es ihr großer Wunsch war, dass die Vereinsgründung Erfolg hat, dass der Verein leben und wachsen kann und dass auch andere Menschen die gleichen Erfahrungen machen können wie sie.',
-      en: 'When she started with CrossFit, Vero quickly learned how great it can feel to go beyond your limits, overcome your inner resistance, and be supported by the people you care about most. She is involved in the board because it was her great wish for the club\'s founding to succeed, for the club to live and grow, and for other people to have the same experiences she had.'
-    }
-  }
 ];
 
 // The description field has been added for future UI implementation

@@ -7,47 +7,47 @@ const Schedule = ({ t }) => {
     monday: {
       de: 'Montag',
       en: 'Monday',
-      classes: [
-        { time: '17:30', name: 'Lauf-Training', icon: Activity, color: 'text-blue-500' }
-      ]
+      classes: []
     },
     tuesday: {
       de: 'Dienstag',
       en: 'Tuesday',
       classes: [
-        { time: '17:30', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
+        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
       ]
     },
     wednesday: {
       de: 'Mittwoch',
       en: 'Wednesday',
       classes: [
-        { time: '19:15', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
+        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
       ]
     },
     thursday: {
       de: 'Donnerstag',
       en: 'Thursday',
-      classes: []
+      classes: [
+        { time: '06:15', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
+      ]
     },
     friday: {
       de: 'Freitag',
       en: 'Friday',
       classes: [
-        { time: '19:00', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
+        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
       ]
     },
     saturday: {
       de: 'Samstag',
       en: 'Saturday',
-      classes: [
-        { time: '11:30', name: 'Team WOD', icon: Users, color: 'text-orange-500' }
-      ]
+      classes: []
     },
     sunday: {
       de: 'Sonntag',
       en: 'Sunday',
-      classes: []
+      classes: [
+          { time: '10:00', name: 'Team WOD', icon: Users, color: 'text-orange-500' }
+      ]
     }
   };
 
