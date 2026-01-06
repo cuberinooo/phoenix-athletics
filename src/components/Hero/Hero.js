@@ -20,7 +20,7 @@ const Hero = ({ t, scrollToSection }) => {
                 centeredSlides={true}
                 slidesPerView={1.3}          // Number of slides visible
                 spaceBetween={-50}            // Negative spacing for overlap effect
-                autoplay={{ delay: 200500 }}
+                autoplay={{ delay: 2500 }}
                 className="hero-swiper"
             >
                 {heroImages.map((img, i) => (
