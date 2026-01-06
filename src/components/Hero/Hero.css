@@ -36,7 +36,6 @@
 
 /* Side slides styling */
 .swiper-slide {
-  padding: 0 150px;
   opacity: 0.3;
   transition: all 0.4s ease;
 }
@@ -93,9 +92,13 @@
 @media (max-width: 768px) {
   .swiper-slide {
     opacity: 1;
-    transform: scale(1);
+    padding: 0 1rem;
   }
   .hero-swiper {
     padding: 0 1rem;
+  }
+
+  .hero-content {
+    padding-top: 250px;
   }
 }
