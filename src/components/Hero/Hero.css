@@ -1,7 +1,7 @@
 .hero {
   position: relative;
-  height: 100vh;
-  padding: 4rem 0;
+  height: 104vh;
+  padding: 6rem 0;
   background: #000;
 }
 
@@ -27,7 +27,7 @@
 
 /* Main image */
 .hero-image {
-  width: 90%;
+  width: 80%;
   object-fit: contain;
   transition: transform 0.4s ease, opacity 0.4s ease;
   border-radius: 12px;
@@ -99,6 +99,6 @@
   }
 
   .hero-content {
-    padding-top: 250px;
+    padding-top: 260px;
   }
 }
