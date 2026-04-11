@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Clock, Activity, Heart, Dumbbell, Users } from 'lucide-react';
+import {Calendar, Clock, Activity, Heart, Dumbbell, Users, Footprints} from 'lucide-react';
 import './Schedule.css';
 
 const Schedule = ({ t }) => {
@@ -7,7 +7,9 @@ const Schedule = ({ t }) => {
     monday: {
       de: 'Montag',
       en: 'Monday',
-      classes: []
+      classes: [
+        { time: '17:30', name: 'Run training', icon: Footprints, color: 'text-orange-500' }
+      ]
     },
     tuesday: {
       de: 'Dienstag',
@@ -27,7 +29,7 @@ const Schedule = ({ t }) => {
       de: 'Donnerstag',
       en: 'Thursday',
       classes: [
-        { time: '06:15', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
+        { time: '19:00', name: 'Functional Fitness', icon: Dumbbell, color: 'text-orange-500' }
       ]
     },
     friday: {

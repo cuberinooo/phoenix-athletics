@@ -34,7 +34,7 @@ const Footer = ({ t }) => {
             {t.footer.bylaws}
           </a>
           |
-          <a href="/assets/docs/beitragsordnung.pdf" className="footer-link" download>
+          <a href="/assets/docs/beitragsordnung_26_03_26.pdf" className="footer-link" download>
             {t.footer.membershipFeeRegulations}
           </a>
         </div>
