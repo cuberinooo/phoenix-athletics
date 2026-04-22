@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.png';
 import './Footer.css';
 
