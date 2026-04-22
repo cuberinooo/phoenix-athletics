@@ -28,7 +28,7 @@ const Footer = ({ t }) => {
           © 2025 Phoenix Athletics e.V. | Made with <Heart className="footer-heart" /> by our community
         </p>
         <div className="footer-content">
-          <a href="/imprint" className="footer-link">{t.imprint.title}</a>
+          <Link to="/imprint" className="footer-link">{t.imprint.title}</Link>
           |
           <a href="/assets/docs/satzung.pdf" className="footer-link" download>
             {t.footer.bylaws}
