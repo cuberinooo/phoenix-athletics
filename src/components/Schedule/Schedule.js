@@ -1,5 +1,5 @@
 import React from 'react';
-import {Calendar, Clock, Activity, Heart, Dumbbell, Users, Footprints} from 'lucide-react';
+import {Calendar, Dumbbell, Users, Footprints} from 'lucide-react';
 import './Schedule.css';
 
 const Schedule = ({ t }) => {

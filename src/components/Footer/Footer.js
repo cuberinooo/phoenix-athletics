@@ -12,7 +12,7 @@ const Footer = ({ t }) => {
       setCurrentSlogan((prev) => (prev + 1) % slogans.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [slogans.length]);
 
   return (
     <footer className="footer">
