@@ -32,7 +32,7 @@ const Home = () => {
     };
 
     return (
-        <div className="bg-dark min-h-screen selection:bg-primary selection:text-white">
+        <div className="bg-white min-h-screen selection:bg-primary selection:text-black">
             <Navigation
                 language={language}
                 setLanguage={setLanguage}

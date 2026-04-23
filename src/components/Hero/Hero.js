@@ -28,11 +28,10 @@ const Hero = ({ t, scrollToSection }) => {
                             <img 
                                 src={img} 
                                 alt="" 
-                                className="absolute inset-0 w-full h-full object-cover grayscale-[20%]" 
+                                className="absolute inset-0 w-full h-full object-cover" 
                             />
-                            {/* Grit overlay */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-dark/60 via-dark/40 to-dark" />
-                            <div className="absolute inset-0 bg-dark/20 backdrop-brightness-75" />
+                            {/* Grit overlay - slightly lighter for better image visibility but still providing contrast */}
+                            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
                         </div>
                     </SwiperSlide>
                 ))}
@@ -41,7 +40,7 @@ const Hero = ({ t, scrollToSection }) => {
             {/* Content overlay */}
             <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">
                 <div className="max-w-4xl space-y-6">
-                    <h1 className="font-display text-5xl md:text-8xl font-extrabold text-white leading-none tracking-tighter animate-fade-in">
+                    <h1 className="font-display text-5xl md:text-8xl font-extrabold text-white leading-none tracking-tighter animate-fade-in drop-shadow-2xl">
                         {t.hero.title.split(' ').map((word, i) => (
                             <span key={i} className={i === 1 ? "text-primary block md:inline" : ""}>
                                 {word}{' '}

@@ -31,7 +31,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
     <nav 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled 
-          ? 'py-3 bg-dark/80 backdrop-blur-lg border-b border-slate-800' 
+          ? 'py-3 bg-white/90 backdrop-blur-lg border-b border-slate-200 shadow-sm' 
           : 'py-6 bg-transparent'
       }`}
     >
@@ -45,9 +45,9 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
             <img 
               src={logo} 
               alt="Phoenix Athletics" 
-              className="h-10 w-auto brightness-0 invert" 
+              className="h-10 w-auto" 
             />
-            <div className="hidden sm:block font-display text-xl font-bold uppercase tracking-tighter">
+            <div className="hidden sm:block font-display text-xl font-bold uppercase tracking-tighter text-slate-900">
               Phoenix <span className="text-primary">Athletics</span>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
               <button
                 key={key}
                 onClick={() => handleNavClick(key)}
-                className="font-display text-sm font-semibold uppercase tracking-widest text-slate-300 hover:text-primary transition-colors duration-200"
+                className="font-display text-sm font-semibold uppercase tracking-widest text-slate-600 hover:text-primary transition-colors duration-200"
               >
                 {value}
               </button>
@@ -66,7 +66,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
             
             <button
               onClick={() => setLanguage(language === 'en' ? 'de' : 'en')}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-700 text-xs font-bold hover:bg-slate-800 transition-all duration-200"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200 text-xs font-bold text-slate-700 hover:bg-slate-50 transition-all duration-200"
             >
               <Globe className="w-3.5 h-3.5" />
               <span>{language === 'en' ? 'DE' : 'EN'}</span>
@@ -76,7 +76,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
+            className="md:hidden p-2 text-slate-600 hover:text-slate-900 transition-colors"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
@@ -85,7 +85,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
 
       {/* Mobile Menu Overlay */}
       <div 
-        className={`fixed inset-0 bg-dark/95 backdrop-blur-xl z-[-1] md:hidden transition-all duration-300 ${
+        className={`fixed inset-0 bg-white/98 backdrop-blur-xl z-[-1] md:hidden transition-all duration-300 ${
           isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
@@ -94,7 +94,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
             <button
               key={key}
               onClick={() => handleNavClick(key)}
-              className="font-display text-3xl font-bold uppercase tracking-tighter text-slate-100 hover:text-primary transition-colors"
+              className="font-display text-3xl font-bold uppercase tracking-tighter text-slate-900 hover:text-primary transition-colors"
             >
               {value}
             </button>
@@ -105,7 +105,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
               setLanguage(language === 'en' ? 'de' : 'en');
               setIsMenuOpen(false);
             }}
-            className="mt-4 flex items-center gap-2 px-6 py-3 rounded-full border border-slate-700 text-lg font-bold"
+            className="mt-4 flex items-center gap-2 px-6 py-3 rounded-full border border-slate-200 text-slate-900 text-lg font-bold"
           >
             <Globe className="w-5 h-5" />
             <span>{language === 'en' ? 'Deutsch' : 'English'}</span>

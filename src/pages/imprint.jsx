@@ -22,7 +22,7 @@ export default function Imprint() {
     };
 
     return (
-        <div className="min-h-screen bg-dark text-slate-50 flex flex-col">
+        <div className="min-h-screen bg-white text-slate-900 flex flex-col">
             <Navigation
                 language={language}
                 setLanguage={setLanguage}
@@ -34,19 +34,19 @@ export default function Imprint() {
                 <div className="max-w-4xl mx-auto">
                     <button 
                         onClick={() => navigate('/')}
-                        className="group flex items-center gap-2 text-slate-400 hover:text-primary transition-colors mb-8 font-display text-sm font-bold uppercase tracking-widest"
+                        className="group flex items-center gap-2 text-slate-500 hover:text-primary transition-colors mb-8 font-display text-sm font-bold uppercase tracking-widest"
                     >
                         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                         Back to Home
                     </button>
 
-                    <h1 className="font-display text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-12">
+                    <h1 className="font-display text-4xl md:text-6xl font-extrabold uppercase tracking-tighter mb-12 text-slate-900">
                         {t.imprint.title}
                     </h1>
 
-                    <div className="bg-slate-900 border border-slate-800 p-8 md:p-12 space-y-8 text-slate-300 leading-relaxed">
+                    <div className="bg-white border border-slate-100 p-8 md:p-12 space-y-8 text-slate-700 leading-relaxed shadow-xl">
                         <div>
-                            <p className="text-white font-bold mb-2 uppercase tracking-wide text-sm">{t.imprint.paragraph}</p>
+                            <p className="text-slate-900 font-bold mb-2 uppercase tracking-wide text-sm">{t.imprint.paragraph}</p>
                         </div>
 
                         <div className="grid md:grid-cols-2 gap-12">
@@ -77,9 +77,9 @@ export default function Imprint() {
                             </div>
                         </div>
 
-                        <div className="pt-8 border-t border-slate-800 space-y-6">
+                        <div className="pt-8 border-t border-slate-100 space-y-6">
                             <div>
-                                <p className="text-white font-display text-xl font-bold uppercase tracking-tight mb-3">{t.imprint.registerEntryTitle}</p>
+                                <p className="text-slate-900 font-display text-xl font-bold uppercase tracking-tight mb-3">{t.imprint.registerEntryTitle}</p>
                                 <p className="text-sm">
                                     Eintragung im Vereinsregister.<br />
                                     Registergericht: Memmingen<br />
@@ -88,12 +88,12 @@ export default function Imprint() {
                             </div>
 
                             <div>
-                                <p className="text-white font-display text-xl font-bold uppercase tracking-tight mb-3">{t.imprint.liabilityForContentTitle}</p>
+                                <p className="text-slate-900 font-display text-xl font-bold uppercase tracking-tight mb-3">{t.imprint.liabilityForContentTitle}</p>
                                 <p className="text-sm italic">{t.imprint.liabilityForContentText}</p>
                             </div>
 
                             <div>
-                                <p className="text-white font-display text-xl font-bold uppercase tracking-tight mb-3">{t.imprint.copyrightTitle}</p>
+                                <p className="text-slate-900 font-display text-xl font-bold uppercase tracking-tight mb-3">{t.imprint.copyrightTitle}</p>
                                 <p className="text-sm italic">{t.imprint.copyrightText}.</p>
                             </div>
                         </div>
@@ -101,8 +101,8 @@ export default function Imprint() {
                 </div>
             </main>
 
-            <footer className="bg-dark/80 backdrop-blur-sm border-t border-slate-900 py-8 text-center">
-                <p className="text-slate-600 font-display text-xs font-bold uppercase tracking-widest">
+            <footer className="bg-slate-50 border-t border-slate-100 py-8 text-center">
+                <p className="text-slate-400 font-display text-xs font-bold uppercase tracking-widest">
                     © {new Date().getFullYear()} Phoenix Athletics e.V.
                 </p>
             </footer>

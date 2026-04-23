@@ -55,14 +55,14 @@ const Schedule = ({ t }) => {
   const currentLang = t.nav.home === 'Home' ? 'en' : 'de';
 
   return (
-    <section id="schedule" className="py-24 bg-dark">
+    <section id="schedule" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <div className="inline-flex items-center gap-3 text-primary font-display text-xl font-bold tracking-widest uppercase">
             <Calendar className="w-6 h-6" />
             <span>{t.schedule.title}</span>
           </div>
-          <h2 className="text-white font-display text-4xl md:text-5xl font-extrabold uppercase tracking-tighter">
+          <h2 className="text-slate-900 font-display text-4xl md:text-5xl font-extrabold uppercase tracking-tighter">
             Push Your Limits
           </h2>
         </div>
@@ -71,13 +71,13 @@ const Schedule = ({ t }) => {
           {Object.entries(weekSchedule).map(([day, info]) => (
             <div 
               key={day} 
-              className={`relative p-6 border transition-all duration-300 ${
+              className={`relative p-6 border transition-all duration-300 shadow-sm ${
                 info.classes.length > 0 
-                  ? 'bg-slate-900 border-slate-800 hover:border-primary/50' 
-                  : 'bg-dark border-slate-900 opacity-50'
+                  ? 'bg-white border-slate-100 hover:border-primary/50 shadow-md' 
+                  : 'bg-slate-100/50 border-slate-200 opacity-60'
               }`}
             >
-              <h3 className="font-display text-xl font-bold uppercase tracking-tight text-white mb-6 border-b border-slate-800 pb-2">
+              <h3 className="font-display text-xl font-bold uppercase tracking-tight text-slate-900 mb-6 border-b border-slate-100 pb-2">
                 {info[currentLang]}
               </h3>
               
@@ -106,14 +106,14 @@ const Schedule = ({ t }) => {
                             </span>
                           </div>
                         </div>
-                        <p className="text-slate-100 font-display text-lg font-bold leading-tight uppercase tracking-tight">
+                        <p className="text-slate-900 font-display text-lg font-bold leading-tight uppercase tracking-tight">
                           {classInfo.name}
                         </p>
                       </div>
                     );
                   })
                 ) : (
-                  <p className="text-slate-600 font-display text-sm font-bold uppercase tracking-widest italic">
+                  <p className="text-slate-400 font-display text-sm font-bold uppercase tracking-widest italic">
                     Rest Day
                   </p>
                 )}
@@ -122,8 +122,8 @@ const Schedule = ({ t }) => {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-slate-900/50 border border-slate-800 text-center">
-          <p className="text-slate-400 font-medium italic">
+        <div className="mt-12 p-6 bg-white border border-slate-100 text-center shadow-sm">
+          <p className="text-slate-600 font-medium italic">
             {t.schedule.note}
           </p>
         </div>
