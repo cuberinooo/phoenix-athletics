@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navigation from '../components/Navigation/Navigation';
 import Hero from '../components/Hero/Hero';
 import About from '../components/About/About';
@@ -13,24 +13,40 @@ const Home = () => {
     const [language, setLanguage] = useState('de');
     const t = translations[language];
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const scrollToSection = (section) => {
-        document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
+        const element = document.getElementById(section);
+        if (element) {
+            const navHeight = 80; // Approximate height of our nav
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     };
 
     return (
-        <div className="app">
+        <div className="bg-dark min-h-screen selection:bg-primary selection:text-white">
             <Navigation
                 language={language}
                 setLanguage={setLanguage}
                 t={t}
                 scrollToSection={scrollToSection}
             />
-            <Hero t={t} scrollToSection={scrollToSection} />
-            <About t={t} />
-            <Management t={t} />
-            <Coaches t={t} />
-            <Schedule t={t} />
-            <Contact t={t} />
+            <main>
+                <Hero t={t} scrollToSection={scrollToSection} />
+                <About t={t} />
+                <Management t={t} />
+                <Coaches t={t} />
+                <Schedule t={t} />
+                <Contact t={t} />
+            </main>
             <Footer t={t} />
         </div>
     );
