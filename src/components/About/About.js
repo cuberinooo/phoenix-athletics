@@ -1,7 +1,7 @@
 import React from 'react';
 import mapImage from '../../assets/ulm-map.png';
-import heroImg1 from '../../assets/hero/001-PXL_20250927_092731913.PORTRAIT~2.jpg';
-import heroImg2 from '../../assets/hero/PXL_20250604_171615879~2.jpg';
+import heroImg1 from '../../assets/hero/1-backlogo.PORTRAIT2.jpg';
+import heroImg2 from '../../assets/hero/PXL_20250928_113418962.MP~2.jpg';
 
 const About = ({ t }) => {
   return (
