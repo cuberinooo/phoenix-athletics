@@ -1,7 +1,7 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, ExternalLink } from 'lucide-react';
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -53,19 +53,22 @@ const Hero = ({ t, scrollToSection }) => {
                     </p>
                     
                     <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
+                        <a
+                            href="https://bookly.phoenix-athletics.de"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-black px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
+                        >
+                            {t.announcement.bookingCta}
+                            <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </a>
+
                         <button
                             onClick={() => scrollToSection('contact')}
-                            className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
+                            className="group flex items-center justify-center gap-2 bg-white hover:bg-slate-100 text-black px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
                         >
                             {t.hero.cta}
                             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </button>
-                        
-                        <button
-                            onClick={() => scrollToSection('about')}
-                            className="bg-transparent border-2 border-white/20 hover:border-white text-white px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300"
-                        >
-                            {t.nav.about}
                         </button>
                     </div>
                 </div>

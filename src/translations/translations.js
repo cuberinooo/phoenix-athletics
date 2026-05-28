@@ -62,6 +62,12 @@ export const translations = {
             title: 'Get in Touch',
             findUs: 'Find us on Instagram for the latest updates, workout tips, and community events!',
             followUs: 'Join our Phoenix Athletics community today!'
+        },
+        announcement: {
+            text: 'New: Our booking system is live!',
+            cta: 'Register here',
+            bookingCta: 'Book Now',
+            membershipCta: 'Become a Member'
         }
     },
     de: {
@@ -128,8 +134,14 @@ export const translations = {
         },
         contact: {
             title: 'Kontaktieren Sie uns',
-            findUs: 'Folgt uns auf Instagram für aktuelle Updates, Workout-Tipps und Community-Events!',
+            findUs: 'Folgt uns auf Instagram für aktuelle Updates, workout-Tipps und Community-Events!',
             followUs: 'Werde Teil unserer Phoenix Athletics Community!'
+        },
+        announcement: {
+            text: 'Neu: Unser Buchungssystem ist online!',
+            cta: 'Hier registrieren',
+            bookingCta: 'Jetzt buchen',
+            membershipCta: 'Mitglied werden'
         }
-    }
-};
+        }
+        };
