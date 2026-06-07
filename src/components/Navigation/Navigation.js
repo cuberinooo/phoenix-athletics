@@ -44,7 +44,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
             {t.announcement.text}
           </span>
           <a 
-            href="https://bookly.phoenix-athletics.de/register?companyName=Phoenix%20Athletics"
+            href="https://app.booklyfit.de/register?companyName=Phoenix%20Athletics"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex items-center gap-1 bg-black text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest hover:bg-slate-800 transition-all duration-200"
@@ -87,7 +87,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
             ))}
 
             <a
-              href="https://bookly.phoenix-athletics.de/register?companyName=Phoenix%20Athletics"
+              href="https://app.booklyfit.de/register?companyName=Phoenix%20Athletics"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary text-black px-5 py-2 text-sm font-bold uppercase tracking-widest hover:bg-primary-dark transition-all duration-200"
@@ -132,7 +132,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
           ))}
 
           <a
-            href="https://bookly.phoenix-athletics.de/register?companyName=Phoenix%20Athletics"
+            href="https://app.booklyfit.de/register?companyName=Phoenix%20Athletics"
             target="_blank"
             rel="noopener noreferrer"
             className="w-full max-w-xs text-center bg-primary text-black py-4 text-xl font-bold uppercase tracking-tighter hover:bg-primary-dark transition-colors shrink-0"

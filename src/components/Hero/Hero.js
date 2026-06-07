@@ -54,7 +54,7 @@ const Hero = ({ t, scrollToSection }) => {
                     
                     <div className="pt-8 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-delay-2">
                         <a
-                            href="https://bookly.phoenix-athletics.de"
+                            href="https://app.booklyfit.de"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-black px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
