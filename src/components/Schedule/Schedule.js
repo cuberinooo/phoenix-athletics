@@ -1,5 +1,5 @@
 import React from 'react';
-import {Calendar, Dumbbell, Users, Footprints} from 'lucide-react';
+import {Calendar, Dumbbell, Users} from 'lucide-react';
 
 const Schedule = ({ t }) => {
   const weekSchedule = {
