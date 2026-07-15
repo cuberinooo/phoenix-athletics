@@ -7,7 +7,7 @@ const Schedule = ({ t }) => {
       de: 'Montag',
       en: 'Monday',
       classes: [
-        { time: '17:30', name: 'Run training', icon: Footprints }
+        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell }
       ]
     },
     tuesday: {
@@ -27,9 +27,7 @@ const Schedule = ({ t }) => {
     thursday: {
       de: 'Donnerstag',
       en: 'Thursday',
-      classes: [
-        { time: '19:00', name: 'Functional Fitness', icon: Dumbbell }
-      ]
+      classes: []
     },
     friday: {
       de: 'Freitag',
