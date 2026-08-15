@@ -56,7 +56,9 @@ export const translations = {
         },
         coaches: {
             title: 'Our Coaches',
-            subtitle: 'Meet the passionate team behind your fitness journey'
+            subtitle: 'Meet the passionate team behind your fitness journey',
+            showMore: 'Read More',
+            showLess: 'Show Less'
         },
         contact: {
             title: 'Get in Touch',
@@ -130,7 +132,9 @@ export const translations = {
         },
         coaches: {
             title: 'Unsere Coaches',
-            subtitle: 'Lerne das leidenschaftliche Team hinter deiner Fitness-Reise kennen'
+            subtitle: 'Lerne das leidenschaftliche Team hinter deiner Fitness-Reise kennen',
+            showMore: 'Mehr lesen',
+            showLess: 'Weniger anzeigen'
         },
         contact: {
             title: 'Kontaktieren Sie uns',
