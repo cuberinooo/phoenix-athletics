@@ -67,7 +67,6 @@ export const coachesData = [
     certifications: [
         'Functional Fitness Trainer',
         'Fitness B License',
-        'Ernährungsberaterin'
     ]
   }
 ];
