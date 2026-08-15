@@ -29,14 +29,14 @@ const Footer = ({ t }) => {
             </h4>
             <div className="flex flex-col gap-3">
               <a 
-                href="/assets/docs/satzung.pdf" 
+                href="/assets/docs/satzung_15_07_26.pdf" 
                 className="text-slate-500 hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider" 
                 download
               >
                 {t.footer.bylaws}
               </a>
               <a 
-                href="/assets/docs/beitragsordnung_26_03_26.pdf" 
+                href="/assets/docs/beitragsordnung_15_07_26.pdf" 
                 className="text-slate-500 hover:text-primary transition-colors text-sm font-medium uppercase tracking-wider" 
                 download
               >
