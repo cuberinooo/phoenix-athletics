@@ -21,6 +21,8 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
       management: 'management',
       coaches: 'coaches',
       schedule: 'schedule',
+      burn: 'burn',
+      donate: 'donate',
       contact: 'contact'
     };
     scrollToSection(sectionMap[section] || 'home');

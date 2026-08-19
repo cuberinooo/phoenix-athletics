@@ -23,6 +23,8 @@ export const translations = {
             management: 'Our Board',
             coaches: 'Coaches',
             schedule: 'Schedule',
+            burn: 'Phoenix Burn',
+            donate: 'Support Us',
             contact: 'Contact'
         },
         hero: {
@@ -65,6 +67,20 @@ export const translations = {
             findUs: 'Find us on Instagram for the latest updates, workout tips, and community events!',
             followUs: 'Join our Phoenix Athletics community today!'
         },
+        burn: {
+            eyebrow: 'Our First Event',
+            title: 'Phoenix Burn 2026',
+            date: 'October 17, 2026',
+            location: 'Ehinger Straße 19, 89073 Ulm',
+            description: 'On October 17, 2026, Ulm is on fire! Phoenix Burn is our very first own event: a mixed-team competition for everyone who\'s up for tough workouts, real team spirit, and an incredible atmosphere. Compete in the Elite or Challenger division, bring your team to the line, and support us along the way with our Pay-per-Rep Challenge. Be part of it - as an athlete, sponsor, or fan!',
+            cta: 'Register Now'
+        },
+        donate: {
+            eyebrow: 'Friends & Supporters',
+            title: 'Help Us Grow Phoenix Athletics!',
+            description: 'We\'re growing - our equipment, unfortunately, not quite as fast. As a donor or supporter, you help us provide better training conditions and new projects for our community.',
+            cta: 'Support Us Now'
+        },
         announcement: {
             text: 'New: Our booking system is live!',
             cta: 'Register here',
@@ -99,6 +115,8 @@ export const translations = {
             management: 'Vorstand',
             coaches: 'Coaches',
             schedule: 'Kursplan',
+            burn: 'Phoenix Burn',
+            donate: 'Unterstützen',
             contact: 'Kontakt'
         },
         hero: {
@@ -140,6 +158,20 @@ export const translations = {
             title: 'Kontaktieren Sie uns',
             findUs: 'Folgt uns auf Instagram für aktuelle Updates, workout-Tipps und Community-Events!',
             followUs: 'Werde Teil unserer Phoenix Athletics Community!'
+        },
+        burn: {
+            eyebrow: 'Unser erstes Event',
+            title: 'Phoenix Burn 2026',
+            date: '17. Oktober 2026',
+            location: 'Ehinger Straße 19, 89073 Ulm',
+            description: 'Am 17. Oktober 2026 brennt Ulm! Der Phoenix Burn ist unser erstes eigenes Event: ein Mixed-Team-Wettkampf für alle, die Bock auf harte Workouts, Teamgeist und eine geile Atmosphäre haben. Tritt in der Elite- oder Challenger-Division an, bring dein Team an den Start – und unterstütze uns nebenbei mit unserer Pay-per-Rep Challenge. Sei dabei, als Athlet, Sponsor oder Fan!',
+            cta: 'Jetzt anmelden'
+        },
+        donate: {
+            eyebrow: 'Freunde & Förderer',
+            title: 'Hilf uns, Phoenix Athletics auszubauen!',
+            description: 'Wir wachsen – unser Equipment leider nicht ganz so schnell. Als Förderer oder mit einer Spende hilfst du uns, bessere Trainingsbedingungen und neue Projekte für unsere Community zu schaffen.',
+            cta: 'Jetzt unterstützen'
         },
         announcement: {
             text: 'Neu: Unser Buchungssystem ist online!',

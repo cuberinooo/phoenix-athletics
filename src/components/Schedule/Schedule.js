@@ -1,5 +1,6 @@
 import React from 'react';
 import {Calendar, Dumbbell, Users} from 'lucide-react';
+import SectionAnchor from '../common/SectionAnchor';
 
 const Schedule = ({ t }) => {
   const weekSchedule = {
@@ -59,6 +60,7 @@ const Schedule = ({ t }) => {
           <div className="inline-flex items-center gap-3 text-primary font-display text-xl font-bold tracking-widest uppercase">
             <Calendar className="w-6 h-6" />
             <span>{t.schedule.title}</span>
+            <SectionAnchor id="schedule" />
           </div>
           <h2 className="text-slate-900 font-display text-4xl md:text-5xl font-extrabold uppercase tracking-tighter">
             Push Your Limits

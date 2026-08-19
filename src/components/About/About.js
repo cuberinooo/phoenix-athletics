@@ -2,6 +2,7 @@ import React from 'react';
 import mapImage from '../../assets/ulm-map.png';
 import heroImg1 from '../../assets/hero/1-backlogo.PORTRAIT2.jpg';
 import heroImg2 from '../../assets/hero/PXL_20250928_113418962.MP~2.jpg';
+import SectionAnchor from '../common/SectionAnchor';
 
 const About = ({ t }) => {
   return (
@@ -22,8 +23,9 @@ const About = ({ t }) => {
           {/* Text Content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-primary font-display text-xl font-bold tracking-widest">
+              <h2 className="text-primary font-display text-xl font-bold tracking-widest inline-flex items-center gap-2">
                 {t.about.title}
+                <SectionAnchor id="about" />
               </h2>
               <h3 className="text-slate-900 font-display text-4xl md:text-5xl font-extrabold leading-tight">
                 {t.about.subtitle}

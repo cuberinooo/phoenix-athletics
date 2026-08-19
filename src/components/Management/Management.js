@@ -1,6 +1,7 @@
 import React from 'react';
 import { managementData } from '../../data/managementData';
 import { ShieldCheck } from 'lucide-react';
+import SectionAnchor from '../common/SectionAnchor';
 
 const Management = ({ t }) => {
   const currentLang = t.nav.home === 'Home' ? 'en' : 'de';
@@ -14,6 +15,7 @@ const Management = ({ t }) => {
                 <div className="inline-flex items-center gap-2 text-primary font-display text-xl font-bold tracking-widest uppercase">
                     <ShieldCheck className="w-6 h-6" />
                     <span>{t.management.title}</span>
+                    <SectionAnchor id="management" />
                 </div>
                 <h2 className="text-slate-900 font-display text-4xl md:text-5xl font-extrabold uppercase tracking-tighter">
                     {t.management.subtitle}

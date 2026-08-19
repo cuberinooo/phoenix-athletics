@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { coachesData } from '../../data/coachesData';
 import { Award, ChevronDown } from 'lucide-react';
+import SectionAnchor from '../common/SectionAnchor';
 
 const CoachCard = ({ coach, currentLang, t }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -115,8 +116,9 @@ const Coaches = ({ t }) => {
     <section id="coaches" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 space-y-4">
-          <h2 className="text-primary font-display text-xl font-bold tracking-widest uppercase">
+          <h2 className="text-primary font-display text-xl font-bold tracking-widest uppercase inline-flex items-center gap-2">
             {t.coaches.title}
+            <SectionAnchor id="coaches" />
           </h2>
           <p className="text-slate-900 font-display text-4xl md:text-5xl font-extrabold uppercase tracking-tighter">
             {t.coaches.subtitle}

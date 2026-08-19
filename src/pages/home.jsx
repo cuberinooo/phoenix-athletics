@@ -7,15 +7,13 @@ import Schedule from '../components/Schedule/Schedule';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import Coaches from '../components/Coaches/Coaches';
+import Burn from '../components/Burn/Burn';
+import Donate from '../components/Donate/Donate';
 import { translations } from '../translations/translations';
 
 const Home = () => {
     const [language, setLanguage] = useState('de');
     const t = translations[language];
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
 
     const scrollToSection = (section) => {
         const element = document.getElementById(section);
@@ -31,6 +29,16 @@ const Home = () => {
         }
     };
 
+    useEffect(() => {
+        const hash = window.location.hash.replace('#', '');
+        if (hash) {
+            requestAnimationFrame(() => scrollToSection(hash));
+        } else {
+            window.scrollTo(0, 0);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
     return (
         <div className="bg-white min-h-screen selection:bg-primary selection:text-black">
             <Navigation
@@ -45,6 +53,8 @@ const Home = () => {
                 <Management t={t} />
                 <Coaches t={t} />
                 <Schedule t={t} />
+                <Burn t={t} />
+                <Donate t={t} />
                 <Contact t={t} />
             </main>
             <Footer t={t} />

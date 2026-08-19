@@ -1,0 +1,25 @@
+# Phoenix Athletics e.V.
+
+> Gemeinnütziger Sportverein für Functional Fitness in Neu-Ulm / Ulm, Deutschland.
+
+Phoenix Athletics e.V. bietet Functional-Fitness-Training für alle Fitnesslevel an - von Anfängern bis zu Wettkämpfern. Trainiert wird gemeinsam, mit und ohne Equipment, drinnen und draußen, unter Anleitung erfahrener Coaches.
+
+## Fakten
+- Standort: Curd-Jürgens-Str. 23, 89231 Neu-Ulm, Bayern, Deutschland
+- Kontakt: info@phoenix-athletics.de
+- Instagram: https://www.instagram.com/phoenixathletics.ev/
+- Website: https://phoenix-athletics.de/
+
+## Seiten
+- [Startseite](https://phoenix-athletics.de/#home): Überblick über den Verein
+- [Über Uns](https://phoenix-athletics.de/#about): Wer wir sind und wofür wir stehen
+- [Vorstand](https://phoenix-athletics.de/#management): Das Führungsteam
+- [Coaches](https://phoenix-athletics.de/#coaches): Unsere Trainer:innen
+- [Kursplan](https://phoenix-athletics.de/#schedule): Wöchentliche Trainingszeiten
+- [Phoenix Burn](https://phoenix-athletics.de/#burn): Unser erstes eigenes Event, ein Mixed-Team-Wettkampf am 17. Oktober 2026 in Ulm
+- [Freunde & Förderer](https://phoenix-athletics.de/#donate): Spenden- und Sponsoring-Möglichkeiten
+- [Kontakt](https://phoenix-athletics.de/#contact): Wie man den Verein erreicht
+- [Impressum](https://phoenix-athletics.de/imprint): Rechtliche Angaben
+
+## Mitgliedschaft & Buchung
+Neue Trainingseinheiten und Mitgliedschaften können über das Booklyfit-Buchungssystem gebucht werden, verlinkt auf der Website.

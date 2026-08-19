@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instagram, Send } from 'lucide-react';
+import SectionAnchor from '../common/SectionAnchor';
 
 const Contact = ({ t }) => {
   return (
@@ -9,8 +10,9 @@ const Contact = ({ t }) => {
       
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="space-y-4 mb-12">
-          <h2 className="text-primary font-display text-xl font-bold tracking-widest uppercase animate-fade-in">
+          <h2 className="text-primary font-display text-xl font-bold tracking-widest uppercase animate-fade-in inline-flex items-center gap-2">
             {t.contact.title}
+            <SectionAnchor id="contact" />
           </h2>
           <p className="text-slate-900 font-display text-4xl md:text-6xl font-extrabold uppercase tracking-tighter">
             Ready to rise?
