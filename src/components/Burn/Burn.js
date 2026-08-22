@@ -8,9 +8,9 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 
 const burnImages = [
-  '/burn/burn.36.54.jpeg',
   '/burn/burn_.36.36.jpeg',
-  '/burn/burn_36.54.jpeg',
+  '/burn/burn_elite.jpeg',
+  '/burn/burn_challenger.jpeg',
 ];
 
 const BURN_SIGNUP_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSen94xdUec0c7z94IY43NvD_UozSJRzgdsi-uTwm6Qk90JNEQ/viewform';
