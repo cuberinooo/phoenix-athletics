@@ -1,5 +1,5 @@
 import React from 'react';
-import {Calendar, Dumbbell, Users} from 'lucide-react';
+import {Calendar, Dumbbell, ExternalLink, Users} from 'lucide-react';
 import SectionAnchor from '../common/SectionAnchor';
 
 const Schedule = ({ t }) => {
@@ -122,7 +122,19 @@ const Schedule = ({ t }) => {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-white border border-slate-100 text-center shadow-sm">
+        <div className="mt-8 flex justify-center">
+          <a
+            href="https://app.booklyfit.de/gym/phoenix-athletics/schedule"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-black px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
+          >
+            {t.schedule.liveCta}
+            <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </div>
+
+        <div className="mt-8 p-6 bg-white border border-slate-100 text-center shadow-sm">
           <p className="text-slate-600 font-medium italic">
             {t.schedule.note}
           </p>

@@ -50,7 +50,8 @@ export const translations = {
         },
         schedule: {
             title: 'Our Training Schedule',
-            note: 'All classes are suitable for all fitness levels. First timers welcome!'
+            note: 'All classes are suitable for all fitness levels. First timers welcome!',
+            liveCta: 'View Live Schedule & Book'
         },
         management: {
             title: 'Our Board',
@@ -142,7 +143,8 @@ export const translations = {
         },
         schedule: {
             title: 'Unsere Trainingszeiten',
-            note: 'Alle Kurse sind für alle Fitness-Level geeignet. Anfänger willkommen!'
+            note: 'Alle Kurse sind für alle Fitness-Level geeignet. Anfänger willkommen!',
+            liveCta: 'Live-Zeitplan ansehen & buchen'
         },
         management: {
             title: 'Unser Vorstand',
