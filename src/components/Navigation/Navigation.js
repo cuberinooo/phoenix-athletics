@@ -21,6 +21,7 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
       management: 'management',
       coaches: 'coaches',
       schedule: 'schedule',
+      faq: 'faq',
       burn: 'burn',
       donate: 'donate',
       contact: 'contact'

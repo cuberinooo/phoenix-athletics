@@ -16,6 +16,7 @@ Phoenix Athletics e.V. bietet Functional-Fitness-Training für alle Fitnesslevel
 - [Vorstand](https://phoenix-athletics.de/#management): Das Führungsteam
 - [Coaches](https://phoenix-athletics.de/#coaches): Unsere Trainer:innen
 - [Kursplan](https://phoenix-athletics.de/#schedule): Wöchentliche Trainingszeiten
+- [FAQ](https://phoenix-athletics.de/#faq): Häufige Fragen zu Training, CrossFit-Bezug, Zielgruppe und Anmeldung
 - [Phoenix Burn](https://phoenix-athletics.de/#burn): Unser erstes eigenes Event, ein Mixed-Team-Wettkampf am 17. Oktober 2026 in Ulm
 - [Freunde & Förderer](https://phoenix-athletics.de/#donate): Spenden- und Sponsoring-Möglichkeiten
 - [Kontakt](https://phoenix-athletics.de/#contact): Wie man den Verein erreicht

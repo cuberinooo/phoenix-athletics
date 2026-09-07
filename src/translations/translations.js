@@ -23,6 +23,7 @@ export const translations = {
             management: 'Our Board',
             coaches: 'Coaches',
             schedule: 'Schedule',
+            faq: 'FAQ',
             burn: 'Phoenix Burn',
             donate: 'Support Us',
             contact: 'Contact'
@@ -36,7 +37,7 @@ export const translations = {
             title: 'Who We Are',
             subtitle: 'Who are we - and what do we actually do?',
             content: [
-                'We are Phoenix Athletics e.V., a young sports club from Neu-Ulm with a great passion for Functional Fitness - and for people.',
+                'We are Phoenix Athletics e.V., a young sports club from Neu-Ulm - right on the border to Ulm - with a great passion for Functional Fitness - and for people.',
                 'But with us, it\'s about more than just weights and repetitions.',
                 'We train together - indoors, outdoors, with equipment or just with our own body weight.',
                 'Everyone is welcome: beginners, sports enthusiasts, couch potatoes, those returning to fitness, or competitors.',
@@ -52,6 +53,24 @@ export const translations = {
             title: 'Our Training Schedule',
             note: 'All classes are suitable for all fitness levels. First timers welcome!',
             liveCta: 'View Live Schedule & Book'
+        },
+        faq: {
+            title: 'FAQ',
+            subtitle: 'Frequently Asked Questions',
+            items: [
+                {
+                    q: 'Is Phoenix Athletics a CrossFit box in Ulm?',
+                    a: 'Phoenix Athletics is not an officially licensed CrossFit affiliate - we are an independent non-profit sports club for Functional Fitness. That said, several of our coaches hold CrossFit certifications and competition experience, and our training draws on the same functional, varied approach to fitness.'
+                },
+                {
+                    q: 'Who is the training suitable for?',
+                    a: 'Everyone - beginners, returning athletes, competitors, and anyone in between. Every session is scaled to individual fitness levels, so it\'s doable no matter where you\'re starting from.'
+                },
+                {
+                    q: 'How can I try a session or become a member?',
+                    a: 'You can register or book directly through our Booklyfit booking system, linked at the top of this page, or reach out to us via email or Instagram.'
+                }
+            ]
         },
         management: {
             title: 'Our Board',
@@ -116,6 +135,7 @@ export const translations = {
             management: 'Vorstand',
             coaches: 'Coaches',
             schedule: 'Kursplan',
+            faq: 'FAQ',
             burn: 'Phoenix Burn',
             donate: 'Unterstützen',
             contact: 'Kontakt'
@@ -129,7 +149,7 @@ export const translations = {
             title: 'Über Uns',
             subtitle: 'Wer sind wir - und was machen wir eigentlich?',
             content: [
-                'Wir sind Phoenix Athletics e.V., ein junger Sportverein aus Neu-Ulm mit einer großen Portion Leidenschaft für Functional Fitness - und für Menschen.',
+                'Wir sind Phoenix Athletics e.V., ein junger Sportverein aus Neu-Ulm - direkt an der Grenze zu Ulm - mit einer großen Portion Leidenschaft für Functional Fitness - und für Menschen.',
                 'Doch bei uns geht\'s um mehr als nur Gewichte und Wiederholungen.',
                 'Wir trainieren gemeinsam - drinnen, draußen, mit Equipment oder nur mit dem eigenen Körpergewicht.',
                 'Dabei ist jeder willkommen: Anfänger/-innen, Sportbegeisterte, Bewegungsmuffel, Wiedereinsteiger/-innen oder Wettkämpfer.',
@@ -145,6 +165,24 @@ export const translations = {
             title: 'Unsere Trainingszeiten',
             note: 'Alle Kurse sind für alle Fitness-Level geeignet. Anfänger willkommen!',
             liveCta: 'Live-Zeitplan ansehen & buchen'
+        },
+        faq: {
+            title: 'FAQ',
+            subtitle: 'Häufige Fragen',
+            items: [
+                {
+                    q: 'Ist Phoenix Athletics eine CrossFit-Box in Ulm?',
+                    a: 'Phoenix Athletics ist kein offiziell lizenziertes CrossFit-Affiliate, sondern ein eigenständiger, gemeinnütziger Sportverein für Functional Fitness. Mehrere unserer Coaches bringen jedoch CrossFit-Zertifizierungen und Wettkampferfahrung mit, und unser Training folgt einem ähnlich funktionellen, abwechslungsreichen Ansatz.'
+                },
+                {
+                    q: 'Für wen eignet sich das Training bei Phoenix Athletics?',
+                    a: 'Für jedes Fitnesslevel - von Anfänger/-innen über Wiedereinsteiger/-innen bis zu Wettkämpfer/-innen. Jede Einheit wird individuell skaliert, sodass sie unabhängig vom Ausgangsniveau machbar ist.'
+                },
+                {
+                    q: 'Wie kann ich ein Probetraining machen oder Mitglied werden?',
+                    a: 'Du kannst dich direkt über unser Booklyfit-Buchungssystem registrieren oder eine Einheit buchen, verlinkt oben auf der Seite - oder uns per E-Mail oder Instagram kontaktieren.'
+                }
+            ]
         },
         management: {
             title: 'Unser Vorstand',
