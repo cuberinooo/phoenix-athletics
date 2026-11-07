@@ -1,62 +1,36 @@
-import React from 'react';
-import {Calendar, Dumbbell, ExternalLink, Users} from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Calendar, ExternalLink } from 'lucide-react';
 import SectionAnchor from '../common/SectionAnchor';
 
-const Schedule = ({ t }) => {
-  const weekSchedule = {
-    monday: {
-      de: 'Montag',
-      en: 'Monday',
-      classes: [
-        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell }
-      ]
-    },
-    tuesday: {
-      de: 'Dienstag',
-      en: 'Tuesday',
-      classes: [
-        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell }
-      ]
-    },
-    wednesday: {
-      de: 'Mittwoch',
-      en: 'Wednesday',
-      classes: [
-        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell }
-      ]
-    },
-    thursday: {
-      de: 'Donnerstag',
-      en: 'Thursday',
-      classes: []
-    },
-    friday: {
-      de: 'Freitag',
-      en: 'Friday',
-      classes: [
-        { time: '18:15', name: 'Functional Fitness', icon: Dumbbell }
-      ]
-    },
-    saturday: {
-      de: 'Samstag',
-      en: 'Saturday',
-      classes: []
-    },
-    sunday: {
-      de: 'Sonntag',
-      en: 'Sunday',
-      classes: [
-          { time: '10:00', name: 'Team WOD', icon: Users }
-      ]
-    }
-  };
+const BOOKLYFIT_SLUG = 'phoenix-athletics';
+const EMBED_SRC = 'https://app.booklyfit.de/embed.js';
+const SCHEDULE_URL = `https://app.booklyfit.de/gym/${BOOKLYFIT_SLUG}/schedule`;
 
-  const currentLang = t.nav.home === 'Home' ? 'en' : 'de';
+// embed.js mounts every not-yet-mounted [data-booklyfit-schedule] node once,
+// when it executes. It has no re-init API, so on each (re)mount of the
+// container we append a fresh copy of the script to pick up the new node.
+function runEmbedScript() {
+  document
+    .querySelectorAll(`script[data-booklyfit-embed]`)
+    .forEach((s) => s.remove());
+  const script = document.createElement('script');
+  script.src = EMBED_SRC;
+  script.async = true;
+  script.setAttribute('data-booklyfit-embed', '');
+  document.body.appendChild(script);
+}
+
+const Schedule = ({ t }) => {
+  const lang = t.nav.home === 'Home' ? 'en' : 'de';
+
+  useEffect(() => {
+    runEmbedScript();
+  }, [lang]);
 
   return (
     <section id="schedule" className="py-24 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 space-y-4">
+        <div className="text-center mb-12 space-y-4">
           <div className="inline-flex items-center gap-3 text-primary font-display text-xl font-bold tracking-widest uppercase">
             <Calendar className="w-6 h-6" />
             <span>{t.schedule.title}</span>
@@ -66,71 +40,26 @@ const Schedule = ({ t }) => {
             Push Your Limits
           </h2>
         </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 gap-4">
-          {Object.entries(weekSchedule).map(([day, info]) => (
-            <div 
-              key={day} 
-              className={`relative p-6 border transition-all duration-300 shadow-sm ${
-                info.classes.length > 0 
-                  ? 'bg-white border-slate-100 hover:border-primary/50 shadow-md' 
-                  : 'bg-slate-100/50 border-slate-200 opacity-60'
-              }`}
-            >
-              <h3 className="font-display text-xl font-bold uppercase tracking-tight text-slate-900 mb-6 border-b border-slate-100 pb-2">
-                {info[currentLang]}
-              </h3>
-              
-              <div className="space-y-6">
-                {info.classes.length > 0 ? (
-                  info.classes.map((classInfo, index) => {
-                    const Icon = classInfo.icon;
-                    return (
-                      <div key={index} className="space-y-3">
-                        <div className="flex items-center gap-3">
-                          <div className="p-2 bg-primary/10 rounded-lg">
-                            <Icon className="w-5 h-5 text-primary" />
-                          </div>
-                          <div className="flex flex-col">
-                            <span className="text-primary font-display font-bold text-sm">
-                              {currentLang === 'de' 
-                                ? `${classInfo.time} Uhr` 
-                                : (() => {
-                                    const [hours, minutes] = classInfo.time.split(':');
-                                    const hour = parseInt(hours);
-                                    const ampm = hour >= 12 ? 'PM' : 'AM';
-                                    const displayHour = hour > 12 ? hour - 12 : (hour === 0 ? 12 : hour);
-                                    return `${displayHour}:${minutes} ${ampm}`;
-                                  })()
-                              }
-                            </span>
-                          </div>
-                        </div>
-                        <p className="text-slate-900 font-display text-lg font-bold leading-tight uppercase tracking-tight">
-                          {classInfo.name}
-                        </p>
-                      </div>
-                    );
-                  })
-                ) : (
-                  <p className="text-slate-400 font-display text-sm font-bold uppercase tracking-widest italic">
-                    Rest Day
-                  </p>
-                )}
-              </div>
-            </div>
-          ))}
+
+        {/* Live Booklyfit calendar. `key` forces a fresh container on language switch. */}
+        <div className="bg-white border border-slate-100 shadow-sm min-h-[600px]">
+          <div
+            key={lang}
+            data-booklyfit-schedule={BOOKLYFIT_SLUG}
+            data-lang={lang}
+          />
         </div>
 
-        <div className="mt-8 flex justify-center">
+        {/* Plain link: fallback when the iframe is blocked, and a crawlable pointer to the live plan */}
+        <div className="mt-4 flex justify-center">
           <a
-            href="https://app.booklyfit.de/gym/phoenix-athletics/schedule"
+            href={SCHEDULE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center justify-center gap-2 bg-primary hover:bg-primary-dark text-black px-8 py-4 rounded-none font-display text-xl font-bold uppercase tracking-wider transition-all duration-300 hover:scale-105"
+            className="group inline-flex items-center gap-2 text-slate-600 hover:text-slate-900 font-display font-bold uppercase tracking-wider text-sm"
           >
-            {t.schedule.liveCta}
-            <ExternalLink className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            {t.schedule.openExternal}
+            <ExternalLink className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </a>
         </div>
 

@@ -25,3 +25,5 @@ yarn-error.log*
 .vscode
 *.swp
 *.swo
+# Raw media drops (album exports)
+/incoming

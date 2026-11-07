@@ -1,7 +1,7 @@
 import React from 'react';
 import mapImage from '../../assets/ulm-map.png';
-import heroImg1 from '../../assets/hero/1-backlogo.PORTRAIT2.jpg';
-import heroImg2 from '../../assets/hero/PXL_20250928_113418962.MP~2.jpg';
+import heroImg1 from '../../assets/hero/06-back-logo-800.webp';
+import heroImg2 from '../../assets/hero/about-crew-800.webp';
 import SectionAnchor from '../common/SectionAnchor';
 
 const About = ({ t }) => {
@@ -68,7 +68,7 @@ const About = ({ t }) => {
                   <span className="font-display text-xl font-bold uppercase tracking-tight">Level welcome</span>
                 </div>
                 <div className="aspect-[3/4] rounded-2xl overflow-hidden border border-slate-100 shadow-lg">
-                  <img src={heroImg2} alt="Training" className="w-full h-full object-cover" />
+                  <img src={heroImg2} alt="Phoenix Athletics Crew" className="w-full h-full object-cover" />
                 </div>
               </div>
             </div>

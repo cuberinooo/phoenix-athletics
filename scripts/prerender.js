@@ -15,7 +15,7 @@ const routeMeta = {
   '/': {
     title: 'Phoenix Athletics e.V. - Functional Fitness in Neu-Ulm & Ulm',
     description:
-      'Phoenix Athletics e.V. - Dein gemeinnütziger Sportverein für Functional Fitness in Neu-Ulm & Ulm. Training für jedes Level, Coaches, Kursplan, FAQ und unser Event Phoenix Burn.',
+      'Phoenix Athletics e.V. - Dein gemeinnütziger Sportverein für Functional Fitness in Neu-Ulm & Ulm. Training für jedes Level, Coaches, Kursplan und FAQ.',
   },
   '/imprint': {
     title: 'Impressum - Phoenix Athletics e.V.',
@@ -82,6 +82,25 @@ async function main() {
       const page = await browser.newPage();
       await page.goto(`http://127.0.0.1:${PORT}${route}`, { waitUntil: 'networkidle0' });
       await waitForRender(page);
+
+      // Third-party widgets (Booklyfit schedule embed) inject an iframe and a
+      // "mounted" flag into a React-owned container. Baking that into the
+      // snapshot breaks hydration and stops the embed from re-mounting, so
+      // reset those containers and drop the injected script tags.
+      await page.evaluate(() => {
+        document.querySelectorAll('[data-booklyfit-schedule]').forEach((el) => {
+          el.removeAttribute('data-booklyfit-mounted');
+          el.innerHTML = '';
+        });
+        document.querySelectorAll('script[data-booklyfit-embed]').forEach((s) => s.remove());
+        // The hero picks its video source per device (orientation, reduced
+        // motion, Save-Data) at runtime. Ship it source-less and hidden so the
+        // poster shows until the client decides.
+        document.querySelectorAll('#home video').forEach((v) => {
+          v.removeAttribute('src');
+          v.className = v.className.replace('opacity-100', 'opacity-0');
+        });
+      });
 
       const html = await page.content();
       const patched = patchHead(html, route);

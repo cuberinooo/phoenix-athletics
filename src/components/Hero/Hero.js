@@ -1,41 +1,64 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectFade } from 'swiper/modules';
+import React, { useEffect, useRef, useState } from 'react';
 import { ChevronRight, ExternalLink } from 'lucide-react';
 
-import 'swiper/css';
-import 'swiper/css/effect-fade';
+const MEDIA = `${process.env.PUBLIC_URL}/media`;
+const SOURCES = {
+    landscape: { video: `${MEDIA}/hero-16x9.mp4`, poster: `${MEDIA}/hero-16x9-poster.webp` },
+    portrait: { video: `${MEDIA}/hero-9x16.mp4`, poster: `${MEDIA}/hero-9x16-poster.webp` },
+};
 
-// Load hero images automatically
-const heroImages = require
-    .context('../../assets/hero', false, /\.(png|jpe?g|webp)$/)
-    .keys()
-    .map((key) => require(`../../assets/hero/${key.replace('./', '')}`));
+// Skip the background video for people who asked for less motion or less data;
+// they get the (identical-looking) poster frame instead.
+function shouldPlayVideo() {
+    if (typeof window === 'undefined' || !window.matchMedia) return false;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false;
+    const conn = navigator.connection;
+    return !(conn && conn.saveData);
+}
 
 const Hero = ({ t, scrollToSection }) => {
+    const videoRef = useRef(null);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (!video || !shouldPlayVideo()) return;
+        const portrait = window.matchMedia('(orientation: portrait)').matches;
+        video.muted = true; // React doesn't reliably reflect `muted` on hydrated <video>; autoplay needs it
+        video.src = SOURCES[portrait ? 'portrait' : 'landscape'].video;
+        const onPlaying = () => setIsPlaying(true);
+        video.addEventListener('playing', onPlaying);
+        video.play().catch(() => {});
+        return () => video.removeEventListener('playing', onPlaying);
+    }, []);
+
     return (
         <section id="home" className="relative h-screen min-h-[700px] overflow-hidden bg-dark">
-            <Swiper
-                modules={[Autoplay, EffectFade]}
-                effect="fade"
-                loop={true}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
-                className="absolute inset-0 w-full h-full"
-            >
-                {heroImages.map((img, i) => (
-                    <SwiperSlide key={i}>
-                        <div className="relative w-full h-full">
-                            <img 
-                                src={img} 
-                                alt="" 
-                                className="absolute inset-0 w-full h-full object-cover" 
-                            />
-                            {/* Grit overlay - slightly lighter for better image visibility but still providing contrast */}
-                            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/80" />
-                        </div>
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            {/* Poster: works without JS, in the prerendered HTML and for reduced-motion users */}
+            <picture>
+                <source media="(orientation: portrait)" srcSet={SOURCES.portrait.poster} />
+                <img
+                    src={SOURCES.landscape.poster}
+                    alt=""
+                    fetchpriority="high"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+            </picture>
+
+            <video
+                ref={videoRef}
+                muted
+                loop
+                playsInline
+                preload="auto"
+                aria-hidden="true"
+                className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                    isPlaying ? 'opacity-100' : 'opacity-0'
+                }`}
+            />
+
+            {/* Grit overlay for text contrast */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/85" />
 
             {/* Content overlay */}
             <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 sm:px-6 lg:px-8">

@@ -7,8 +7,8 @@ import Schedule from '../components/Schedule/Schedule';
 import Contact from '../components/Contact/Contact';
 import Footer from '../components/Footer/Footer';
 import Coaches from '../components/Coaches/Coaches';
+import Gallery from '../components/Gallery/Gallery';
 import FAQ from '../components/FAQ/FAQ';
-import Burn from '../components/Burn/Burn';
 import Donate from '../components/Donate/Donate';
 import { translations } from '../translations/translations';
 
@@ -53,9 +53,9 @@ const Home = () => {
                 <About t={t} />
                 <Management t={t} />
                 <Coaches t={t} />
+                <Gallery t={t} />
                 <Schedule t={t} />
                 <FAQ t={t} />
-                <Burn t={t} />
                 <Donate t={t} />
                 <Contact t={t} />
             </main>

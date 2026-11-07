@@ -22,9 +22,9 @@ export const translations = {
             about: 'Who We Are',
             management: 'Our Board',
             coaches: 'Coaches',
+            gallery: 'Gallery',
             schedule: 'Schedule',
             faq: 'FAQ',
-            burn: 'Phoenix Burn',
             donate: 'Support Us',
             contact: 'Contact'
         },
@@ -52,7 +52,7 @@ export const translations = {
         schedule: {
             title: 'Our Training Schedule',
             note: 'All classes are suitable for all fitness levels. First timers welcome!',
-            liveCta: 'View Live Schedule & Book'
+            openExternal: 'Open schedule in Booklyfit'
         },
         faq: {
             title: 'FAQ',
@@ -82,18 +82,22 @@ export const translations = {
             showMore: 'Read More',
             showLess: 'Show Less'
         },
+        gallery: {
+            eyebrow: 'Gallery',
+            title: 'Moments That Move Us',
+            subtitle: 'Competition days, city runs and everyday sessions - this is what Phoenix looks like.',
+            showAll: 'Show All',
+            showLess: 'Show Less',
+            close: 'Close',
+            previous: 'Previous',
+            next: 'Next',
+            playVideo: 'Play video',
+            openImage: 'Open image'
+        },
         contact: {
             title: 'Get in Touch',
             findUs: 'Find us on Instagram for the latest updates, workout tips, and community events!',
             followUs: 'Join our Phoenix Athletics community today!'
-        },
-        burn: {
-            eyebrow: 'Our First Event',
-            title: 'Phoenix Burn 2026',
-            date: 'October 17, 2026',
-            location: 'Ehinger Straße 19, 89073 Ulm',
-            description: 'On October 17, 2026, Ulm is on fire! Phoenix Burn is our very first own event: a mixed-team competition for everyone who\'s up for tough workouts, real team spirit, and an incredible atmosphere. Compete in the Elite or Challenger division, bring your team to the line, and support us along the way with our Pay-per-Rep Challenge. Be part of it - as an athlete, sponsor, or fan!',
-            cta: 'Register Now'
         },
         donate: {
             eyebrow: 'Friends & Supporters',
@@ -134,9 +138,9 @@ export const translations = {
             about: 'Über Uns',
             management: 'Vorstand',
             coaches: 'Coaches',
+            gallery: 'Galerie',
             schedule: 'Kursplan',
             faq: 'FAQ',
-            burn: 'Phoenix Burn',
             donate: 'Unterstützen',
             contact: 'Kontakt'
         },
@@ -164,7 +168,7 @@ export const translations = {
         schedule: {
             title: 'Unsere Trainingszeiten',
             note: 'Alle Kurse sind für alle Fitness-Level geeignet. Anfänger willkommen!',
-            liveCta: 'Live-Zeitplan ansehen & buchen'
+            openExternal: 'Kursplan in Booklyfit öffnen'
         },
         faq: {
             title: 'FAQ',
@@ -194,18 +198,22 @@ export const translations = {
             showMore: 'Mehr lesen',
             showLess: 'Weniger anzeigen'
         },
+        gallery: {
+            eyebrow: 'Galerie',
+            title: 'Momente, die uns bewegen',
+            subtitle: 'Wettkampftage, Stadtläufe und ganz normale Trainings - so sieht Phoenix aus.',
+            showAll: 'Alle anzeigen',
+            showLess: 'Weniger anzeigen',
+            close: 'Schließen',
+            previous: 'Zurück',
+            next: 'Weiter',
+            playVideo: 'Video abspielen',
+            openImage: 'Bild öffnen'
+        },
         contact: {
             title: 'Kontaktieren Sie uns',
             findUs: 'Folgt uns auf Instagram für aktuelle Updates, workout-Tipps und Community-Events!',
             followUs: 'Werde Teil unserer Phoenix Athletics Community!'
-        },
-        burn: {
-            eyebrow: 'Unser erstes Event',
-            title: 'Phoenix Burn 2026',
-            date: '17. Oktober 2026',
-            location: 'Ehinger Straße 19, 89073 Ulm',
-            description: 'Am 17. Oktober 2026 brennt Ulm! Der Phoenix Burn ist unser erstes eigenes Event: ein Mixed-Team-Wettkampf für alle, die Bock auf harte Workouts, Teamgeist und eine geile Atmosphäre haben. Tritt in der Elite- oder Challenger-Division an, bring dein Team an den Start – und unterstütze uns nebenbei mit unserer Pay-per-Rep Challenge. Sei dabei, als Athlet, Sponsor oder Fan!',
-            cta: 'Jetzt anmelden'
         },
         donate: {
             eyebrow: 'Freunde & Förderer',

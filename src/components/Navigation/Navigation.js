@@ -20,9 +20,9 @@ const Navigation = ({ language, setLanguage, t, scrollToSection }) => {
       about: 'about',
       management: 'management',
       coaches: 'coaches',
+      gallery: 'gallery',
       schedule: 'schedule',
       faq: 'faq',
-      burn: 'burn',
       donate: 'donate',
       contact: 'contact'
     };
