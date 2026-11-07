@@ -78,9 +78,7 @@ export const translations = {
         },
         coaches: {
             title: 'Our Coaches',
-            subtitle: 'Meet the passionate team behind your fitness journey',
-            showMore: 'Read More',
-            showLess: 'Show Less'
+            subtitle: 'Meet the passionate team behind your fitness journey'
         },
         gallery: {
             eyebrow: 'Gallery',
@@ -194,9 +192,7 @@ export const translations = {
         },
         coaches: {
             title: 'Unsere Coaches',
-            subtitle: 'Lerne das leidenschaftliche Team hinter deiner Fitness-Reise kennen',
-            showMore: 'Mehr lesen',
-            showLess: 'Weniger anzeigen'
+            subtitle: 'Lerne das leidenschaftliche Team hinter deiner Fitness-Reise kennen'
         },
         gallery: {
             eyebrow: 'Galerie',
